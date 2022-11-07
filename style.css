@@ -207,6 +207,121 @@ body {
   padding-left: 25px;
 }
 
+.user-navigation-item {
+  position: relative;
+}
+
+.popover-cart {
+  position: absolute;
+  width: 320px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: none;
+  top: 30px;
+  left: 14px;
+}
+
+.popover:hover  .popover-cart {
+  display: block;
+}
+
+.popover-cart::before {
+  content:'';
+  position: absolute;
+  width: 14px;
+  height: 6px;
+  background-image: url("img/svg/popover_arrow.svg");
+  top: -6px;
+  transform: translateX(-50%);
+  left: calc(50% - 7px);
+}
+
+.popover-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  font-family: 'Rubik';
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.popover-cart-item {
+  padding: 20px;
+  border-bottom: 1px solid  #1A1A1A;
+  display: flex;
+  gap: 57px;
+}
+
+.popover-cart-item-desc {
+  display: flex;
+  gap: 23px;
+  text-decoration: none;
+}
+
+.popover-cart-item-desc:hover,
+.popover-cart-item-delete:hover  {
+  opacity: 0.6;
+}
+
+.popover-cart-item-desc:focus,
+.popover-cart-item-delete:focus,
+.popover-cart-open:focus   {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.popover-cart-item-desc:active,
+.popover-cart-item-delete:active  {
+  opacity: 0.3;
+}
+
+.popover-cart-item-delete {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: none;
+}
+
+.popover-cart-item-title {
+  font-family: 'Rubik';
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+
+}
+
+.popover-cart-summary {
+  display: flex;
+  justify-content: space-between;
+  padding:12px 20px;
+  background-color: #1A1A1A;
+}
+
+.popover-cart-open {
+  margin: 20px;
+  padding: 14.5px 0;
+  text-align: center;
+  background-color: #ffffff;
+  font-family: 'Raleway';
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+}
+
+.popover-cart-open:hover {
+  background-color: #FFE17F;
+}
+
+.popover-cart-open:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .navigation-link.cart::before {
   content: '';
   position: absolute;
